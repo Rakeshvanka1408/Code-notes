@@ -1,0 +1,505 @@
+Youtube video in webpage:
+=========================
+
+<ifrmae> </iframe>
+
+=============================================
+
+Forms:
+======
+<form>:
+======
+	Syntax:
+		<form> 
+			text (user name)
+			email, pwd
+			dob
+			mobile
+			account. no
+		</form>
+
+===================================
+gmail signin:
+============
+	mail id:
+	pwd
+		signin
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign In Page </title>
+    </head>
+    <body>
+        <form>
+            <div> Email : <input type = "email"> </div><br>
+            <div> Password : <input type = "password"> </div><br>
+            <div> <input type = "submit"> </div>
+        </form>
+    </body>
+</html>
+
+
+PROFESSIONAL FORM:
+==================
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign-In Form </title>
+        <style>
+            .card{
+                width:300px;
+                box-shadow: 2px 2px 3px 3px #e6f0f3;
+                margin: 20px;
+            }
+            .card-header{
+                background-color: aliceblue;
+                padding: 10px 18px;
+                color: rgb(40, 115, 90);
+                font-weight: bold;
+                text-align: center;
+            }
+            .card-body{
+                padding: 18px;
+            }
+            .signin{
+                width : 700px;
+                margin : auto;
+                margin-top: 20px;
+                margin-bottom: 100px;
+            }
+            .form-element{
+                height: 20px;
+                margin-bottom: 5px;
+            }
+            .form-label{
+                width:30%;
+                float:left;
+            }
+            .form-control-container{
+                width:70%;
+                float: left;
+            }
+            .form-control{
+                width : 100px;
+                padding : 8px;
+                border-radius: 3px;
+                border : 1px solid red;
+            }
+            .form-control:focus{
+                box-shadow: 0px 0px 3px 2px #0c5b38;
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "card" "signin">
+            <div class = "card-header"> Sign-In </div>
+            <div class = "card-body">
+                <form>
+                    <div class = "form-element">
+                        <div class = "form-label">  Email: </div>
+                        <div class = "form-control-container"> 
+                            <input type = "email" class = "form-control" value="abc@gmail.com">
+                        </div> 
+                    </div><br>
+                    <div class = "form-element"> 
+                        <div class = "form-label"> Password : </div> 
+                        <div class = "form-control-container">
+                            <input type = "password" class = "form-control">
+                        </div>
+                    </div>
+                    <!-- <div> <input type = "submit" value = "signin"> </div> -->
+                     <div> <button> Sign In </button></div><br>
+                     <div> <input type = "reset"> </div>
+                      <!-- <button type = "reset"> Reset </button> -->
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+Focus on form elements:
+======================
+for attribute:
+==============
+==> to make the linking between the label text and the text box (input), we can use "for attribute".
+Syntax:
+	<label for = "mail"> Label Text </label>
+	<input type = "email" id = "mail">
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Focus of HTML Form Element </title>
+        <style>
+            input:focus{
+                box-shadow: 0px 0px 2px 2px #ff1197;
+                background-color: yellow;
+            }
+            input{
+                transition: box-shadow 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for = "gmail"> Email : </label>
+            <input type = "email" id = "gmail">
+        </form>
+    </body>
+</html>
+==================================
+
+input : text
+=============
+input : color
+=============
+input : date
+=============
+input : datetime-local
+=======================
+input : time
+=============
+input : month
+==============
+input : week
+============
+input : file
+============
+input : url
+============
+input : number
+==============
+input : range
+=============
+input : search
+===============
+input : radio
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Basic HTML Application Form </title>
+    </head>
+    <body>
+        <h1> Online Application Form </h1>
+        <form>
+            <input type = "search"><br><br>
+            <label> First Name : </label>
+            <input type = "text">
+            <label> Middle Name : </label>
+            <input type = "text">
+            <label> Last Name : </label>
+            <input type = "text"><br><br>
+            <label> Chose your Favorite Color : </label>
+            <input type = "color"><br><br>
+            <label> Select your Date of Birth : </label>
+            <input type = "date"><br><br>
+            <label> DOB with Time : </label>
+            <input type="datetime-local"><br><br>
+            <label> Enter the time for travel : </label>
+            <input type = "time"><br><br>
+            <input type="month"><br><br>
+            <input type = "week"><br><br>
+            <label> Attach Your Resume : </label>
+            <input type = "file"><br><br>
+            <label> Social Media : </label>
+            <input type = "url"><br><br>
+            <label> Aadhar Number: </label>
+            <input type = "number"><br><br>
+            <label> Rate Yourself in Java : </label>
+            <input type = "range"><br><br>
+            <label> Gender : </label>
+            male : <input type = "radio" name = "gender">
+            female : <input type="radio" name = "gender">
+            other : <input type="radio" name = "gender">
+            <input type = "submit">
+        </form>
+    </body>
+</html>
+
+==============================
+
+Assignment:
+===========
+https://ibpsonline.ibps.in/sbisco2aug24/basic_details.php
+
+
+
+
+
+
+
+Form Elements:
+==============
+check box:
+==========
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Check Box </title>
+    </head>
+    <body>
+        <form>
+            <label> Languages Known : </label>
+            <input type = "checkbox" id = "language" name = "language" value = "languages"> English
+            <input type = "checkbox"> Hindi
+            <input type = "checkbox"> Telugu
+            <input type = "checkbox"> Kannda
+            <input type = "checkbox"> Urdu
+        </form>
+    </body>
+</html>
+
+================================================
+hidden:
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Hidden Form Element </title>
+    </head>
+    <body>
+        <form>
+            <label> Email : </label>
+            <input type = "email"><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+
+===============================================
+
+readonly attribute:
+==================
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label>First Name : </label>
+            <input type = "text" value = "Ravi" readonly><br><br>
+            <label> Email : </label>
+            <input type = "email"><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+
+======================================
+disabled attribute:
+===================
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label>First Name : </label>
+            <input type = "text" value = "Ravi" readonly><br><br>
+            <label> Email : </label>
+            <input type = "email" disabled><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <button disabled> Go Next </button>
+        </form>
+    </body>
+</html>
+
+==========================================
+
+required attribute:
+==================
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label>First Name : </label>
+            <input type = "text" value = "Ravi" readonly><br><br>
+            <label> Email : </label>
+            <input type = "email" required><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+========================================
+min and max:
+============
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label>User Name : </label>
+            <input type = "text"><br><br>
+            <label> Email : </label>
+            <input type = "email"><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <label> Rate Yourself in Java : <label>
+            <input type = "range" min="1" max = "5"><br><br>
+            <label> Amount : </label>
+            <input type="number" min="100" max="1000"><br><br>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+
+================================================
+novalidate
+===========
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form novalidate>
+            <label>User Name : </label>
+            <input type = "text"><br><br>
+            <label> Email : </label>
+            <input type = "email"><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <label> Rate Yourself in Java : <label>
+            <input type = "range" min="1" max = "5"><br><br>
+            <label> Amount : </label>
+            <input type="number" min="100" max="1000"><br><br>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+===================================================
+formnovalidate:
+================
+<textarea>
+==========
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label>User Name : </label>
+            <input type = "text"><br><br>
+            <label> Email : </label>
+            <input type = "email"><br><br>
+            <label> Password : </label>
+            <input type = "password"><br><br>
+            <label> Unknown Element : </label>
+            <input type = "hidden"><br><br>
+            <label> Rate Yourself in Java : <label>
+            <input type = "range" min="1" max = "5"><br><br>
+            <label> Amount : </label>
+            <input type="number" min="100" max="1000"><br><br>
+            <label> Describe Your Knowledge : </label>
+            <textarea rows="50" cols="100"></textarea>
+            <button> Go Next </button>
+        </form>
+    </body>
+</html>
+
+=====================================
+<select>
+=======
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Read Only Attribute </title>
+    </head>
+    <body>
+        <form>
+            <label> Known Programming Languages : </label>
+            <select multiple>
+                <option> C </option>
+                <option> C++ </option>
+                <option> Python </option>
+                <option> Java </option>
+                <option> PHP </option>
+                <option> C# </option>
+                <option> Shell Script </option>
+            </select>
+        </form>
+    </body>
+</html>
+========================================
+Sending form data from one location to another location
+========================================================
+username : ravi\gender : male\phone : 898989689
+
+<fieldset> & <legend>
+======================
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <fieldset>
+                <legend> Personal Information : </legend>
+                <label> First Name: </label>
+                <input type="text"><br><br>
+                <label> Middle Name: </label>
+                <input type="text"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend> Education Details : </legend>
+            </fieldset>
+            <fieldset>
+                <legend> Experience Details : </legend>
+            </fieldset>
+            <fieldset>
+                <legend> Declaration : </legend>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

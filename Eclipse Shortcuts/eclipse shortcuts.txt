@@ -1,0 +1,23 @@
+		
+			Eclipse Shortcut Keys For Java Programming
+		
+	Crtl+Shift+R : To find all resource files, including the config XML files from the workspace
+	Crtl+Shift+R : To find class in an application or from inside a jar.
+	Crtl+W		 : To close the current files
+	Crtl+Shift+W : To close all the open files
+	Crtl+Shift+O : To organize missing imports
+	Crtl+Shift+F : To format the code
+	Crtl+/ 		 : To add / remove the single line comments for selected line
+	Crtl+Shift+Enter: To add blank line before the current line
+	Alt+Shift+S,R   : To generate Setters & Getters 
+	Alt+Shift+S,S   : To generate toString() method
+	Alt+Shift+S,O 	: To add constructor with fields
+	Crtl+1+Enter	: To store method return value to variable
+	Crtl+D			: To delete current line
+	Crtl+O			: To display all methods of current class, Pressing Ctrl+O again will display the inherited methods
+	Crtl+Shift+P 	: Go to matching bracket
+	Alt+Shift+R		: To rename
+	Alt+Shift+T 	: To open the context-sensitive refactoring menu
+	Alt+Shift+Z		: To surround a block with try and catch
+	Ctrl+Shift+/	: To comment and uncomment lines with a block comment
+	Crtl+Q			: To go to the last edited position

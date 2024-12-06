@@ -1,0 +1,93 @@
+1.what is Database?
+	>> A database is an organized collection of data, stored and retrieved digitally from a 
+	remote or local computer system
+2.what is sql?
+	>> sql stands for structured query language .it is the standard language for relational
+	database management system. if is especially useful in handling organized data comprised of 
+	entities(variables) and relations between different entities of the data.
+3.what is difference between sql and mysql?
+	SQL is a standard language for retrieving and manipulating structured databases. On the contrary, 
+	MySql is relaional databasemanagement system, like sql server, oracle or IBM DB2,that is used
+	to manage sql databases.
+4.what is DBMS ?
+	DBMS stands for database management System. DBMS is a system software responsible for the creation,
+	retrieval, updation, and management of the database.
+5.what is RDBMS? How is it different from DBMS?
+	RDBMS stands for Relational Database Management System. THe key difference here, compared to DBMS,
+	Is the that RDBMS stores data in the form of a collection of tables, and relations can be defined 
+	between the common fields of these tables.
+6.what are tables and fields?
+	A table is an organized collection of data stored in the form of rows and columns, Columns can be
+	categorized as vertical and rows as horizontal. the columns in a table are called fields while the
+	rows can be reffered to as records.
+	EXAMPLE: STUDENT DETAILS.
+	FIELD: ID, DEPARTMENT , EMAIL.
+	RECORDS:1, AJAY,AJAY@GMAIL.COM.
+7. What are Constraints in SQL?
+	Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple
+	fields in an SQL table during the creation of the table of after creating using the ALTER TBALE COMMAND. The constraints are:
+	NOT NULL    - Restricts NULL value from being inserted into a column.
+	CHECK       - Verifies that all values in a field satisfy a condition.
+	DEFAULT     - Automatically assigns a default value if no value has been specified for the field.
+	UNIQUE		- Ensures unique value to be inserted into the field.
+	INDEX		- Indexes a field providing faster retireval of records.
+	PRIMARY KEY - uniquelu identifies each record in a table.
+	FOREIGN KEY - ensure referential integrity for a record in another table.
+8. what is a PRIMARY key?
+	The PRIMARY KEY constraints uniquely identifies each row in a table. it must contain unique value
+	and has an implicit NOT NULL constraint.
+9. what is a UNIQUE constraint?
+	A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness
+	for the column(s) and helps  identify each row uniquely. Unlike primary key, there can be 
+	multiple unique constraints defined per table.
+10. what is foreign key?
+	 A FOREIGN KEY comprises of single or collection of fields in a table tat essentially refers to
+	 the  PRIMARY KEY  in anothe table. FOREIGN key constraint establishes the relation between two tables.
+11. what are the different subsets of SQL? 
+	DATA DEFINITION LANGUAGE(DDL)- It allows you to perform various operations on the database such as
+	CREATE, ALTER, AND DELETE objects.
+	DATA MANIPULATION LANGUAGE (DML)- IT allows you to access and manipulate data. it helps you to insert,
+	update, delete and retrieve data from the database.
+	DATA CONTROL LANGUAGE(DCL) - It allows you to control acess to the database. Example-Grant, Revoke access permissions.
+	TRANSACTION CONTROL LANGUAGE (TCL) - It is used to deal with the transacton operations in the database. 
+	The commands in the category are COMMIT, TOLLBACK, SET TRANSACTION, SAVEPOINT,etc,.
+12. what are the set operators in sql?
+	we use the set operators to merge data from one or more tables of the same  kind. Although the set operators are like
+	SQL joins, there is a significant distinction,
+	1.UNION: It combines two or more results from multiple select queries into a single result set, it has a default features
+	to remove the duplicate rows from the tables. The following syntax illustrates the Union operator.
+13. what are sql comments?
+	Comments are explanations or annotations in SQL queries that are readable by programmers. It's
+	used to make sql statements easier to understand for humans. During the parsing of SQL code, it
+	will be ignored , comments can be written on a single line or across several lines.
+	>>SINGLE LINE COMMENTS; it starts with two consecutive hyphens(--).
+	>>MULTI-LINE comments: it starts with /* and ends with */
+14.How to drop view?
+	DROP VIEW VIEW_NAME;
+	
+	
+	
+	
+	
+	VIEW SYNTAX;
+		CREATE VIEW VIEW_NAME AS SELECT COULUMN_NAME(S) FROM TABLE_NAME;
+		EX: CREATE VIEW DEMO AS SELECT ENAME,SAL,EMPNP FROM EMP;
+	
+	
+	
+	
+																
+
+
+										@@ PL/SQL @@
+	
+	PS/SQL -> PS/SQL Stands for procedure structured language 
+							(or)
+	PL/SQL -> PL/SQL Stands for procedure standard language.
+==> pl/sql is a advanced sql
+				(or)
+==> pl/sql is a extension of sql language
+==>pl/sql is a BLOCK Structured programming language.
+				##BLOCK STRUCTURE.
+				 
+

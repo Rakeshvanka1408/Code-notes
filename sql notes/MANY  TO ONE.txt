@@ -1,0 +1,21 @@
+***NORMALIZATION***
+>>The processes of reducing large tables into small,small tables is known as normalization.
+		**TYPES OF NORMALIZATION**
+		>>first normal form(1NF)
+		>>second normalform(2nf)
+		>>third normalform(3nf)
+		>>boyce_codd normal form(bcnf)
+NOTE POINT:-
+            * if any table reduce to 3nf we can say table is normalized
+ ###1NF###
+ >>No repeated record duplicate 
+ >>data entered in a cell must be single value
+ >> we have make a large table by bringing all the attributes in a single table and
+    make as large table.
+###2NF###
+ >>To become a second normal form table should follow first normalform rules
+ >>Table should not have partial functional dependency .
+ ###3NF###
+ >> To become a 3nf the table should follow second normal form.
+ >> We have to identify all the partial functional dependency to move such columns into a 
+	separate table

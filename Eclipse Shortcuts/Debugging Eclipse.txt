@@ -1,0 +1,37 @@
+**Debugging in Java**
+
+**Definition of Debugging**
+- **Debugging**: The process of finding and resolving defects or problems within a computer program that prevent correct operation .
+
+**Importance of Debugging**
+- Every developer should know debugging as it helps identify and fix bugs .
+- Debugging is essential for understanding application execution flow, especially for new developers .
+
+**Differences Between Debugging and Testing**
+- **Testing**: The main purpose is to find a bug.
+- **Debugging**: Focuses on finding the root cause of the bug and fixing it. Debugging is a deeper process than testing .
+
+**Debugging Process**
+1. **Choosing the Program**: Select the method you want to debug.
+2. **Setting Breakpoints**: Choose a breakpoint from which to start debugging .
+3. **Running in Debug Mode**: Launch the program in debug mode and confirm the perspective switch .
+
+**Keyboard Shortcuts for Debugging**
+- **F5**: Step into the method.
+- **F6**: Step over to the next line.
+- **F7**: Step out of the method.
+- **F8**: Resume execution to the next breakpoint .
+
+**Debugging a Standalone Application**
+- Example: A calculator application with methods for addition, subtraction, multiplication, and division .
+- Set breakpoints in the main class and debug to understand the execution flow .
+
+**Debugging a Web Application**
+- Start debugging by right-clicking the application and selecting "Debug as Debug on Server" .
+- Example: Adding a book to a database and verifying its insertion .
+
+**Remote Debugging**
+- Allows debugging of applications running on different systems. Requires specifying the machine and port number .
+
+**Conclusion**
+- Debugging is a critical skill for developers, enabling them to identify and resolve issues effectively, understand application flow, and improve code quality.

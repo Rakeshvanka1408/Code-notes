@@ -1,0 +1,270 @@
+Sending the data to destination location in the URL format:
+============================================================
+
+file:///G:/UI_4PM_Practice/Forms/test.html?Firstname=abc&Middlename=pqr&Lastname=xyz
+
+method attribute:
+================
+	get | post
+
+get ==> can able to send the data in URL format
+post ==> cannot able to send the data in URL format.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Submission </title>
+    </head>
+    <body>
+        <form action="test.html" method="post" target="_blank">
+            <label for = "fname"> First Name : </label>
+            <input type="text" id = "fname" name = "Firstname"><br><br>
+            <label for = "mname"> Middle Name : </label>
+            <input type="text" id = "mname" name = "Middlename"><br><br>
+            <label for = "lname"> Last Name : </label>
+            <input type="text" id = "lname" name = "Lastname"><br><br>
+            <button> Submit </button>
+        </form>
+    </body>
+</html>
+
+============================================
+Advanced CSS Selectors:
+========================
+1) class-class compound selector
+=================================
+<tag class = "cls1" "cls2"> </tag>
+
+ex: <p class = "one" "two"> context </p>
+<p class = "one"> context </p>
+
+Syntax:
+	.class1.class2{
+		property : value;
+	}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Class Class Compound Selector </title>
+        <style>
+            .one.js{
+                color : red;
+                padding: 10px;
+                border: 5px solid black;
+                margin: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> UI Development </h1>
+            <p class = "one"> HTML </p>
+            <p class = "one"> CSS </p>
+            <p class = "one js"> JavaScript </p>
+            <p class = "one"> Bootstrap </p>
+        </div>
+    </body>
+</html>
+
+======================================================
+class-class child selector
+===========================
+<tag class = "value">
+	<tag1 class = "val1">
+</tag1>
+</tag>
+
+Syntax:
+	.class1 .class2{
+		property : value;
+	}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Class Class Compound Selector </title>
+        <style>
+            .div1 .div2{
+                background-color: azure;
+                padding: 10px;
+                border: 2px solid #ff9779;
+                margin:10px;
+            }
+            .div1 .div2 .div3{
+                background-color: aqua;
+                border : 3px dashed #f79f7f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "div1">
+            <div class = "div2">
+                HTML <br>
+                CSS <br>
+                <div class = "div3"> JavaScript </div>
+                Bootstrap <br>
+            </div>
+        </div>
+    </body>
+</html>
+=========================================
+Id-Class Child Selector
+=======================
+<tag1 id "val1">
+	<tag2 class = "val2"> </tag2>
+</tag1>
+
+Syntax:
+	#id_value .class_value{
+		property : value;
+	}
+
+===========================================
+Tag-Class Compound Selector:
+============================
+Syntax:
+	tag.class-name{
+		property : value;
+	}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Class Class Compound Selector </title>
+        <style>
+            h1.heading{
+                padding : 10px;
+                margin : auto;
+                border: 3px solid aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class = "heading"> Ashok IT </h1>
+        <h1> UI Development </h1>
+    </body>
+</html>
+===============================================
+tag-id compound selector:
+========================
+Syntax:
+	tag-name#id-name{
+		property : value;
+	}
+
+============================================
+tag-class child selector:
+=========================
+Syntax:
+	tag-name .class-name{
+		property : value;
+	}
+
+===========================================
+tag-tag child selector:
+======================
+<div>
+	<h1> </h1>
+	<p> </p>
+	<h2> </h2>
+	<p> </p>
+</div>
+
+div h2{
+	property : value;
+}
+
+Syntax:
+	tag1 tag2{
+		property : value;
+	}
+
+========================================
+<tag1>
+	<p> </p>	==> direct child
+	<tag2>
+		<p> </p> ==> indirect child
+	</tag2>
+</tag1>
+
+tag-tag direct child:
+=====================
+Syntax:
+	parent-tag > child-tag{
+		property : value;
+	}
+
+<div>
+	<h1>
+	<p>
+	<div>
+		<p>
+	</div>
+	<p>
+</div>
+
+general sibling selector:
+=========================
+Syntax:
+	parent-tag ~ child-tag{
+		property : value;
+	}
+
+<div>
+	<h1>
+	<p>	# DIRECT
+	<div>
+		<p> # INDIRECT
+	</div>
+	<p>	# DIRECT
+</div>
+
+
+
+
+
+
+
+
+
+
+VARIABLES:
+=========
+
+navigation bar ==> all pages
+	bg color : blue;
+
+cards
+home
+	variable ==> bg color
+
+:root{
+	--variable-name : value;
+}
+
+property-name : var(--variable-name);
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Variables </title>
+        <style>
+            :root{
+                --ravi : #0d6c8e;
+            }
+            body{
+                background-color: var(--ravi);
+            }
+        </style>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+
+
+
+
+

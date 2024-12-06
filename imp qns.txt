@@ -1,0 +1,5 @@
+1.what will you do if a sudden error occured in the software?
+>>open ELK(Elastic search + Logstash + Kibana) 
+>>open log file(log files are created by the computer which stores the information about the activities,operation,usage of the system)
+>>select the particular time when the error occured and downlod the log file and read it, so that you can find the root cause of the error
+		
