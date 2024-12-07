@@ -1,0 +1,141 @@
+
+======
+Maven
+======
+
+=> It is free and open source s/w.
+
+=> It is developed by Apache org.
+
+=> It is developed using java lang.
+
+=> It is used as build tool for java projects.
+
+=> Maven is used to automate "java projects build process".
+
+===========================
+What we can do using Maven
+============================
+
+1) We can create java projects skelton/structure.
+
+2) We can download required libraries (jars)
+
+	Ex: spring, boot, hibernate, junit, poi, itext...
+
+3) We can compile project source code
+
+4) We can execute project unit test cases 
+   (junits)	
+
+5) We can package application as jar or war file for execution.
+
+==================
+Maven Terminology
+==================
+
+Archetype : Represents type of project
+
+		quick-start : console app
+
+		web-app : web application
+
+groupId : Represents company name
+
+	Ex : com.tcs
+		 com.ibm
+		 in.ashokit
+
+
+ArtifactId : Represents project name
+
+Version : Represents project version
+	
+		SNAPSHOT : under development
+
+		RELEASE : Delivered to client		 	
+
+
+Dependencies : Represents libraries required for project
+
+	Ex : spring, spring-boot, hibernate, junit..
+
+
+Maven Repositories : Represents the location of maven dependencies
+
+		1) Central (public)
+		2) Remote (private -> nexus/jfrog)
+		3) Local (.m2)
+
+Maven Goals : Used to perform project build process.		
+
+	compile : convert .java files to .class files
+
+	test : execute junits
+
+	package : generate jar or war
+
+	clean : delete .class files
+
+
+=============
+Maven Setup
+=============
+
+@@ Ref Video : https://www.youtube.com/watch?v=hV1OWzYpzxo
+
+1) Download and install jdk s/w
+
+2) Setup JAVA_HOME and Java Path in env variables
+
+3) Download Maven software from apache website
+
+4) Setup MAVEN_HOME and maven path in env variables
+
+5) Verify maven setup using cmd
+
+		mvn -version
+==================================================
+
+
+============================
+Create Maven Project in CLI
+============================
+
+=> Open CmD and execute below command to create maven project
+
+mvn archetype:generate -DgroupId=in.ashokit -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
+
+=> We can see below folder structure in the maven project
+
+		My-App
+			- src/main/java   (source code .java files)
+			- src/main/resources (config files)
+			- src/test/java (junit classes)
+			- src/test/resources (config files for testing)
+			- Maven Dependencies (jars)
+			- pom.xml (project object model)
+
+=> Go inside maven project and execute maven goals
+
+		cd my-app
+
+		mvn compile
+		mvn test
+		mvn package
+		mvn clean package			
+
+
+=> Byte code will be generated in project "target" directory.		
+
+=> We can add maven dependencies in "pom.xml" file.
+
+=> We can find maven dependencies in below website
+
+		URL : www.mvnrepository.com
+
+==============
+Assignment		
+===============
+
+Gradle Video : https://www.youtube.com/watch?v=I84f9Q5bFBA
