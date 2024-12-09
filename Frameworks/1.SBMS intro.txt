@@ -82,7 +82,7 @@ Module-2 : Spring Boot
 
 Module-3 : Data JPA (extension for hibernate)
 
-Module-4 : Spring Web MVC (C2B)
+Module-4 : Spring Web MVC (C2B) :classes from 09-12-2024
 
 Module-5 : Spring REST (webservices)
 
