@@ -247,6 +247,10 @@ rmdir : remove empty directory
 
 rm : remove file 
 
+rm * : to remove all files from the directory
+
+rm *.txt: to remove all txt file from directory
+
 rm -rf : remove non-empty directories
 
 cat : create file with data + append data + print data
@@ -349,7 +353,10 @@ ping: To check connectivity
 wget: To download files from internet
 
 	wget <url>
-	
+
+unzip: to unzip the zip files
+		
+		unzip <file name>
 
 curl: To send Http request to server 
 
@@ -410,7 +417,7 @@ How to enable password based authentication in linux ?
 # open sshd_config file
 sudo vi /etc/ssh/sshd_config
 
-=> Find the Line containing â€˜PasswordAuthenticationâ€™ parameter and change its value from â€˜noâ€™ to â€˜yesâ€™
+=> Find the Line containing ˜PasswordAuthentication parameter and change its value from no to ˜yes
 
 Note: save that file and close it using :wq + Enter
 
@@ -425,3 +432,126 @@ exit
 
 # execute ssh command
 ssh john@public-ip 
+
+
+==================
+File Permissions 
+==================
+
+=> File permissions are divided into 3 types 
+
+		a) read (r)
+		b) write (w)
+		c) execute (x)
+		
+=> File permissions will be represented like below
+
+	Ex : -rwxrwxrwx f1.txt
+	     drwxrwxrwx ashokit
+	
+=> First 3 characters will represent owner permissions (the user who created that file)
+
+=> Middle 3 characters will represent group permissions.
+
+=> Last 3 characters will represent other users permissions.	
+
+
+Ex:
+
+-rw-r-xr-x f1.txt 
+
+owner => read + write 
+group => read + execute 
+others => read + execute 
+
+-rwx------ f2.txt 
+
+owner : read + write + execute 
+group : Nothing
+Others: Nothing
+
+
+=> To add or remove file permissions we will use 'chmod' command.
+
+# add execute permission for user(owner)
+chmod u+x f1.txt 
+
+# remove write permission for user(owner)
+chmod u-w f1.txt 
+
+# add write and execute permissions for group
+chmod g+wx f1.txt
+
+# remove read permission for others
+chmod o-r f1.txt
+
+=> We can represent file permissions using numeric numbers also.
+
+0 => No Permissions 
+
+1 => Execute
+
+2 => Write
+
+3 => (2+1) => Write + Execute 
+
+4 => Read 
+
+5 => (4+1) => Read + Execute 
+
+6 => (4+2) => Read + Write 
+
+7 => (4+2+1) => Read + Write + Execute
+
+# user-read, group-write, others- r+e
+chmod 425 f1.txt
+
+# u+rw, g+w, o+we
+chmod 623 f1.txt
+
+#u-rwx, g-rwx , o+rwx
+chmod 7 f1.txt 
+
+#u-rwx, g+rwx , o+rwx
+chmod 77 f1.txt 
+
+======================================
+How to change ownership of the file ?
+======================================
+
+=> using chown command we can change ownership 
+
+$ sudo chown ashok f1.txt
+
+
+==================
+Package Managers
+==================
+
+Package : A software 
+
+=> Package managers are used to manage softwares installation in linux machines.
+
+=> Package Managers are specific to linux distribution.
+
+yum : amazon linux, cent os 
+
+apt : ubuntu , debian
+
+rpm : red hat
+
+
+# install git 
+sudo yum install git -y 
+git --version
+whereis git
+
+# install java 
+sudo yum install java -y
+java -version
+whereis java
+
+# install maven 
+sudo yum install maven -y
+maven -version
+whereis maven

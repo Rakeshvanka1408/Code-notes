@@ -1,0 +1,34 @@
+Angular Introduction
+------------------------
+->Angular is a client side frameword
+->Angular is used to create Web Applications
+->Angular is mainly used for Single Page Applications Development.
+->Angular supports all platforms(Desktop and Mobile).
+->Angular is free and open source.
+->Angular is having cross-browser compatibility.
+->Angular is developed by google.
+---------------------------------------------------
+
+Angular JS and Angular Framework
+======= ========= ========= ====
+->The initial version of Angular is Angular Js(Angular 1.0)which is developed by using Java Script.
+->After few days google realized the problems with Angular JS then they started developing 
+  one new framework to develop wev applications thats where Angular Framework came into Market.
+  This Angular framework is developed by using Type Script
+-> From Version 2.0 onwards it is called as Angular Framework
+->Angular 2.0 is not enhancement for Angular 1.0 because in 2.0 version Google 
+  Developers completely re-written Angular framework by using TypeScript.
+-> Typescript developed by Microsoft Company.
+-> Angular 2+ versions are extensions of Angular 2.0 version
+-> Angular 1.x versions are called as Angular JS
+-> Angular 2.0 and later versions are called as Angular framework versions
+-> The current version of Angular is ..(Latest version released in nov-202_).
+-------------------------------------------------------
+Angular Architecture
+===== ===== =======
+1.Components
+2.Meta Data
+3.Services 
+4.Templates
+5.Directives
+6.Pipes

@@ -64,7 +64,8 @@ Ex:
 Auto Configuration
 ====================
 
-=> AutoConfiguration is the process of identifying configurations required for the application and provide them whenever needed.
+=> AutoConfiguration is the process of identifying configurations required for the application and provide 
+   them whenever needed.
 
 => SpringBoot will take care of configurations required for the application.
 		
@@ -158,7 +159,8 @@ Developing First SpringBoot application
 What is start class in springboot ?	
 ===================================
 
-=> When we create springboot application by default one java class will be created with main () method that is called as start class of spring boot.
+=> When we create springboot application by default one java class will be created with main () method 
+   that is called as start class of spring boot.
 
 => Start Class is entrypoint for springboot application execution.
 
@@ -196,7 +198,8 @@ AnnotationConfigReactiveWebServerApplicationContext
 Component Scanning	
 ===================
 
-=> The process of identifying spring bean classes available in the application is called as Component scanning.
+=> The process of identifying spring bean classes available in the application is called as 
+   Component scanning.
 
 => Component scanning will work based on package names.
 
@@ -361,6 +364,11 @@ What is Dependency Injection ?
 		a) setter method level (SI)
 		b) constructor level (CI)
 		c) field level (FI)
+		
+Q) what is pojo classes?
+->A plain old Java object (POJO) is a class definition that is not tied to any Java framework 
+ so any Java program can use it. A POJO has no particular naming convention for properties 
+ and methods, or any other special restrictions.
 
 =============================================================
 How to access private variables outside of the class ?
