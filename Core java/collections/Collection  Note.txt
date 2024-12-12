@@ -80,24 +80,28 @@ a[3] = new Customer(102, "Rani", 2000.00);
 
 To overcome the problems of Arrays we are going to use Collections
 
-
+-> Collection:if we want to represent a group of objects as single entity then we should go for Collections.
+	Collection is a utility class present in java.util package to define several utility methods for Collection object.
 -> Collections are used to store group of objects / values
-
 -> Collections are growable in nature
- (dynamically collection size can be increased and decreased based on data)
-
+	(dynamically collection size can be increased and decreased based on data)
 -> We can store any type of data in Collection
 	(homegeneuous & heterogeneuous)
-
 -> Collections providing predefined methods to insert,update, delete, retrieve, sort etc....
-
 -> Collections is a entity / container which is used to store group of Objects
 ->collections are introduced from the java 1.2v
+------------------
+Collection framework:
+->it defines several classes and interfaces to represent a group of Objects as single entity
 Collections ----> Collections Framework
-
+-----------------------
+Collection:
+->Collection is an interface which can be used to represent a group of Objects as a single entity.
+-----------------
 Framework means ready made software
 
-Collections is called as framework because it is providing predefined interfaces, classes and methods to perform operations on data.
+In Java, the language has provided a set of pre-defined classes and interfaces by implementing Data structure principles
+   to perform operations on data and these classes and interfaces is combinedly called Collection Framework.
 
 
 
@@ -105,6 +109,8 @@ Collections is called as framework because it is providing predefined interfaces
 1) Why we need to for Collections ?
 
 2) What is Collection Framework ?
+>>In Java, the language has provided a set of pre-defined classes and interfaces by implementing Data structure principles
+   to perform operations on data and these classes and interfaces is combinedly called Collection Framework.
 
 3) Collection Hierarchy
 
@@ -1655,7 +1661,58 @@ Collections Framework Summary
 
 
 
+               Generics
 
+class StudentRecord {
+   Student[]  stud = new Student[10];
+   public void add(Student s) {
+          //logic
+   }
+   public Student get(int rollno) {
+          //logic
+   }
+}
+class BookRecord {
+    Book[]   books = new Book[10];
+    public void add(Book b) {
+         //logic
+    }
+    public Book  get(int bookid) {
+         //logic
+    }
+}
+
+•	In the above 2 classes are created for the same operations but to perform on different object types.
+•	The first class is performing operation on Student type objects and the second class is performing operation on Book type objects.
+•	if we have more object types, then we need to create more number of classes, for the same operations.
+•	It will increase the number of classes in a project.
+•	So, the solution is, create a generic class.
+•	A generic class is a class, but it can be used with multiple object types, to perform the same operations.
+•	A generic class, is a class with type parameters.
+for example:
+
+class Record<T> {
+     T[]  arr = new T[10];
+     public void add(T  t) {
+         //logic
+     }
+     public T  get(int id) {
+         //logic
+     }
+}
+•	while creating a generic class/ generic interface, the classname/interface should contain type parameters with in angle brackets.
+•	The parameter types can be,
+The most commonly used type parameter names are:
+•	E - Element (used extensively by the Java Collections Framework)
+•	K - Key
+•	N - Number
+•	T - Type
+•	V - Value
+•	S,U,V etc. - 2nd, 3rd, 4th types
+
+•	object creation for the above generic class is
+like below.
+Record<Book>  bookRecord = new Record<Book>(); Record<Student> studentRecord=new Record<Student>();
 
 
 
