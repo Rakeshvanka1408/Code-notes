@@ -462,6 +462,18 @@ pop ( ) ---> to remove last element
 
 3) Enumeration   ----> forward direction & supports for legacy collection classes
 
+Q) what is the difference between Enumeration and Iterator?
+A) 1. Enumeration is a legacy interface.
+      Iterator is a collection framework interface.
+   2. Enumeration interface contains methods 
+       hasMoreElements()
+       nextElement()
+      Iterator interface contains methods
+        hasNext()
+        next()
+        remove()
+
+
 
 
 ======
@@ -867,6 +879,16 @@ HashMap
 -> It is avilable in java 1.2v
 
 -> Insertion Order will not be maintained by HashMap
+
+1.	put(key,value): inserts the key-value to the map and returns the value.
+2.	get(key): retruns the value of the specified key. Returns null if the key doesn’t exist.
+3.	remove(key): removes the mapping from this map object for the key, and returns the value. If the map is empty, then returns null.
+4.	replace(key,value): replaces the value for a key in this map, if the key exists. Otherwise returns null.
+5.	containsKey(key): returns true, if this map object contains the specified key. Otherwise, returns false.
+6.	containsValue(value): returns true, if this map object contains the specified value. Otherwise, returns false.
+7.	keySet() : returns keys of this map object into a Set. Returns null if this map object is empty.
+8.	values(): returns values of this map object into a set. Returns null if this map object is empty.
+9.	entrySet(): returns the map entries as Map.Entry objects into a set. Returns null, if the map object is empty.
 
 ==================
 LinkedHashMap
@@ -1655,6 +1677,64 @@ Collections Framework Summary
 
 		a) java.lang.Comparable (compareTo(Object obj1) )
 		c) java.util.Comparator (compare(Object obj1, Object obj2)
+==============================
+java.util package
+-----------
+-->all the classes and interfaces of collections present in java.util package
+-->Along with those below classes  also there
+java.util.Scanner
+java.util.StringTokenizer
+java.util.Date
+java.util.Calendar
+
+--------------
+Tokenizers
+--------------
+=>StringTokenizer is a predefined class available in java.util package
+=> Using this class we can split string into multiple token based on delimiter
+
+ppackage util_package;
+
+import java.util.StringTokenizer;
+
+public class Tokenizers {
+	public static void main(String[] args) {
+		
+		String s = "Hii i'm Rakesh";
+		StringTokenizer st = new StringTokenizer(s," ");
+		while(st.hasMoreElements()) {
+			System.out.println(st.nextToken());
+		}
+		}
+	/*Output:
+	 * Hii
+	 * i'm
+	 * Rakesh	 * 
+	 */
+}
+=============================
+java.util.Date & java.util.Calendar
+------------------------------------------
+package util_package;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Date_class{
+	public static void main(String[] args) {
+		Date d  = new Date();
+		System.out.println(d);//Fri Dec 13 19:38:58 IST 2024
+
+		Calendar c = Calendar.getInstance();
+		System.out.println(c.get(Calendar.YEAR));//2024
+		System.out.println(c.get(Calendar.DAY_OF_MONTH));//13
+
+	}
+}
+
+
+
+
 
 
 
@@ -1720,6 +1800,19 @@ Record<Book>  bookRecord = new Record<Book>(); Record<Student> studentRecord=new
 
 
 
+BlockingQueue:
+•	It is queue, which additionally supports blocking operations.
+•	A blocking queue will have a fixed capacity.
+•	If a thread wants to add an element, but the queue is full, then the thread has to wait until space becomes available.
+•	If a thread wants to remove an element, but the queue is empty, then the thread has to wait until element becomes available.
+•	The blocking operations are put() and take().
+•	When put() is called, if the queue is full, put() will wait for the space.
+•	when take() is called, if the queue is empty, take() will wait for the element.
+•	The implementation classes are, ArrayBlockingQueue and LinkedBlockingQueue.
+•	For creating producer-consumer applications, producer adds items to the queue and consumer remvoes items from the queue.
+•	If the queue is full, producer waits until, space becomes available. If the queue is empty, consumer waits until, item becomes available.
+•	For example, In a Job execution application, one thread is adding the job to the queue and the other thread is removing the job from the queue and executing it.
+•	If the queue if full, the first thread waits to add the job, until space becomes available. If the queue is empty, the other threads waits until a job is added.
 
 
 
