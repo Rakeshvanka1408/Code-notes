@@ -235,7 +235,8 @@ Methods of ArrayList
 ==================
 1) add (Object obj )  ---> add object at end of the collection
 2) add(int index, Object) --> add object at given index
-3) addAll (Collection c) ---> to add collection of objects at end of the collection
+3) addAll (Collection c) ---> to add collection of objects at end of the collection.i,e., to add one collection data into another collection.
+ex: a.addAll(b);
 4) remove(Object obj)  ---> To remove given object
 5) remove(int index)   ----> to remove object based on given index
 6) get(int index)     --> to get object based on index
@@ -401,7 +402,7 @@ Vector
 
 -> Implementation class of List interface
 -> Internal data structure is growable array
--> duplicates are allowed
+-> duplicates are allowed and null values are allowed
 -> insertion order preserved
 -> This is synchronized(only one thread can be accessed at a time)
 -> Vector is called as legacy class ( jdk v 1.0)
@@ -435,6 +436,7 @@ Stack(from java 1.0v)
 -> Implementation class of List interface
 
 -> Extending from Vector class
+->duplicates and null values are allowed
 
 -> Data Structure of Stack is LIFO (last in first out)
 
