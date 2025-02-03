@@ -1,5 +1,70 @@
 1.what will you do if a sudden error occured in the software?
+-------------------------------------------------------------------------
 >>open ELK(Elastic search + Logstash + Kibana) 
 >>open log file(log files are created by the computer which stores the information about the activities,operation,usage of the system)
 >>select the particular time when the error occured and downlod the log file and read it, so that you can find the root cause of the error
+	
+2) What is difference between Interface and Abstract?
+---------------------------------------------------------
+=>Abstract Class:
+			An abstract class is a class that cannot be instantiated and is meant to be extended by other classes.
+=>Interface:
+An interface is a blueprint for a class that defines a set of methods that a class must implement.
+
+3) Why Constructors cannot be Static?
+--------------------------------------
+=> Constructors cannot be static because they are designed to initialize objects, 
+which inherently require an instance context. Static methods and variables belong
+ to the class, not instances, making them incompatible with the purpose of a constructor.
+ 
+4) What is the super class of exception?
+------------------------------------------
+	java.lang.Object
+    |
+    +-- java.lang.Throwable
+            |
+            +-- java.lang.Error
+            |       +-- OutOfMemoryError
+            |       +-- StackOverflowError
+            |
+            +-- java.lang.Exception
+                    +-- IOException
+                    +-- SQLException
+                    +-- RuntimeException
+                            +-- NullPointerException
+                            +-- ArrayIndexOutOfBoundsException
+                            +-- ArithmeticException
 		
+1. Throwable:
+		The Throwable class is the root class for all errors and exceptions in Java.
+		It has two direct subclasses:
+		1.Error
+		2.Exception
+2. Error:
+		Represents serious problems that a reasonable application should not try to catch.
+		Examples:
+				OutOfMemoryError
+				StackOverflowError
+				VirtualMachineError
+3. Exception
+Represents conditions that a program might want to catch and handle.
+The Exception class has two categories:
+	Checked Exceptions: Must be declared in the throws clause of a method or caught using a try-catch block.
+			Examples:
+			IOException
+			SQLException
+			FileNotFoundException
+	Unchecked Exceptions (Runtime Exceptions): Do not need to be declared or caught.
+			Examples:
+			NullPointerException
+			ArrayIndexOutOfBoundsException
+			ArithmeticException
+			
+5) Super class of AbstractList?
+--------------------------------
+	The superclass of the AbstractList class in Java is AbstractCollection, which is part of the java.util package. 
+>>Common Subclasses of AbstractList
+	ArrayList<E>
+	LinkedList<E>
+	Vector<E>
+	CopyOnWriteArrayList<E> (in java.util.concurrent)

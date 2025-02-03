@@ -1727,7 +1727,7 @@ public class Date_class{
 		Date d  = new Date();
 		System.out.println(d);//Fri Dec 13 19:38:58 IST 2024
 
-		Calendar c = Calendar.getInstance();
+		Calendar c = Calendar.getInstance();//Calendar is interface
 		System.out.println(c.get(Calendar.YEAR));//2024
 		System.out.println(c.get(Calendar.DAY_OF_MONTH));//13
 
@@ -1794,7 +1794,8 @@ The most commonly used type parameter names are:
 
 •	object creation for the above generic class is
 like below.
-Record<Book>  bookRecord = new Record<Book>(); Record<Student> studentRecord=new Record<Student>();
+Record<Book>  bookRecord = new Record<Book>();
+ Record<Student> studentRecord=new Record<Student>();
 
 
 
@@ -1817,4 +1818,7 @@ BlockingQueue:
 •	If the queue if full, the first thread waits to add the job, until space becomes available. If the queue is empty, the other threads waits until a job is added.
 
 
-
+===============================================================================================================================================
+Q) What is factory method?
+---------------------------
+=> A method which provides or returns the object is called the factory methods.

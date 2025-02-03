@@ -206,3 +206,6 @@ Summary
 		- WinScp
 		- ELK
 		- SPlunk
+		
+Q)
+we can downgrade the log level by using the admin server

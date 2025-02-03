@@ -1,0 +1,134 @@
+1) why did you choose this field?
+---------------------------------------
+"I chose software development because I love the creative process of building applications
+ that can solve real-world problems and have a direct impact on users." 
+ 
+ 2) where do you see yourself in next 5 years?
+ -----------------------------------------------------
+ "In the next five years, I see myself growing as a skilled software developer, taking on more responsibilities,
+ and contributing to challenging projects. I'd also like to mentor junior developers and expand my leadership skills 
+ while continuing to learn and stay up-to-date with new technologies. Ultimately, I want to make a meaningful 
+ impact on the team and the company.
+ 
+ 3)Why should we hire you?
+ --------------------------------
+ "I believe my strong foundation in Core and Advanced Java, HTML, CSS, JavaScript, and SQL, combined with my passion
+ for coding, would allow me to contribute effectively to your team. I am also highly adaptable, eager to learn 
+ new technologies, and always looking for ways to improve my problem-solving skills. Beyond technical abilities,
+ I bring a collaborative mindset and a strong work ethic, ensuring that I can work well within your team
+ and align with the company’s goals. I’m excited about the opportunity to grow with your company and contribute to its success."
+ 
+ 4) How do you handle Stress and pressure?
+ ----------------------------------------------------
+ "As a fresher, I understand that stress and pressure are part of any professional environment. 
+ When faced with tight deadlines or challenging situations, I prioritize my tasks and break down larger 
+ challenges into smaller, achievable goals to make progress step by step. I also make sure to communicate 
+ openly with my team if additional support is needed. I also believe in taking short breaks when necessary
+ to refresh my mind and maintain productivity. I stay calm under pressure, 
+ and I try to keep a positive attitude, as I know it's important to learn and grow from these experiences.""
+ 
+ 5)How do yu describe your leadership skills?
+ -------------------------------------------------------
+ "While I haven’t had a formal leadership role yet, I believe leadership is about guiding and motivating others 
+ toward a common goal. I demonstrate leadership through my ability to collaborate well with team members, 
+ listen to different perspectives, and offer support when needed. I also take the initiative to contribute ideas and 
+ help my peers when I can. I’m always eager to learn and improve, and I look forward to growing my leadership 
+ skills through experience, feedback, and opportunities in the workplace."
+ 
+ 6) Can you provide an example of  a situation where have you demostrated strong leadership skills?
+ --------------------------------------------------------------------------------------------------------------------
+ " I have had opportunities to demonstrate leadership skills in academic projects. During a group project in my final year, 
+ we had to develop a software solution within a tight deadline.I took the initiative to organize tasks based on each team 
+ member's strengths and set a clear timeline. I ensured open communication, addressed concerns, and kept everyone motivated.
+ The project was completed on time, and this experience helped me understand the importance of organization, teamwork, 
+ and leadership."
+ 
+ 7) Least subject u like. Why it is least?
+ 8) why java and why not any other languages?
+**"I chose Java because it strikes a balance between simplicity and power. It’s platform-independent,
+ which means 'write once, run anywhere,' making it highly versatile for developing applications 
+ across different systems. The language’s robust libraries and frameworks enable efficient coding 
+ for complex tasks, especially in enterprise-level applications.
+Additionally, Java has a strong focus on object-oriented programming, which aligns with my way of 
+structuring problems and solutions. The community support and extensive documentation also make it
+ easier to learn, troubleshoot, and grow as a developer.
+While I respect other languages for their unique strengths—like Python for data science or JavaScript
+ for web development—Java’s reliability, scalability, and widespread use in industries make it my 
+ preferred choice for building stable and efficient software solutions."**
+
+
+ 9) One successful story?
+    My father’s success story is one of resilience and unwavering dedication. Coming from a background 
+ where education was a distant dream, he had to start working at a very young age to support his
+ family. He eventually found work as a security guard—a humble and physically demanding job.
+    Despite the long hours and modest income, my father never let his lack of formal education hold
+ him back. He was determined to give his children the opportunities he never had. Every rupee he
+ earned went toward ensuring we had a roof over our heads, food on the table, and access to education.
+ 
+    I remember how he would come home tired after long shifts, yet he always had a smile for us and would
+ ask about our studies. He often said, 'My biggest dream is to see you succeed and lead a life better
+ than mine.' His sacrifices taught me the value of hard work, humility, and perseverance.
+
+	Today, as I stand on the path of success, I owe it all to him. Though he may not have earned 
+	degrees or accolades, my father is my hero—a man who showed me that true success is about making 
+	a difference in the lives of those you love. His story is a constant reminder that education, 
+	though important, is not the only measure of a person’s worth or potential."**
+ 10) One unsuccessful story?
+ 11) About native place?
+ 12) About weakness?
+ 13)problems and conflicts?
+ 14) which one do you prefer Work From Home or work from Office? and why?
+ 15)  If we Won't Hire you what Would you Do.
+ 16) What is Trending Technology Now Booming. And why didn't you choose that technology instead of java
+ 17) Othet than Technical have you Participated in Any Events.
+ 18)  Why do Want to Shift To IT from non-It.
+ 19) How to OverCome From Challenges.
+ 20)  Why your Team Members have Choosen  you for the Project? 
+ 21) Apart from Technical Side what. did u Learn from ur Project
+ 22) What do you learn from your project?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+														******Introduce yourself******
+ 
+ Good morning, Sir/Madam,
+Thank you for giving me the opportunity to introduce myself.
+
+My name is Rakesh Vanka, and I am from Tirupati, Andhra Pradesh. I completed my graduation in 2024 with a degree
+ in Electronics and Communication Engineering (ECE), achieving an aggregate of 79%. I am a quick learner with strong
+ communication skills. Currently, I am undergoing training in Java Full Stack Development at Ashok IT Institute, Hyderabad.
+ I have developed proficiency in Core Java, SQL, and Spring Boot. My goal is to establish myself as a Full Stack Developer.
+		Utilizes mammography images to categorize breast cancer types.
+		Utilizes image processing techniques for successful classification. 
+		Potential to revolutionize diagnosis and treatment, saving lives and improving patient outcomes.
+After reviewing the job description, I strongly believe that my skills align well with the requirements of this role. Joining your 
+organization, one of the fastest-growing companies, would be an excellent start to my career. I am confident that this opportunity 
+will allow me to enhance my skills and contribute effectively to the company's success.
+
+My hobbies include watching movies and anime, as well as spending quality time with my family.
+
+That's all about me.
+Thank you.
+
+
+-----------------------------------
+ 
+	Good morning sir/madam ,
+	Thank you for giving this oppurtunity to indroduce myself.
+	
+	My name is Rakesh vanka. I'm from Tirupati, Andra Pradesh. I have completed my graduation in 2024 in  the stream of ECE 
+	with an aggregate of 79 %. My strengths are i'm a quick learner and have good communication skills. Currently i'm under
+	training of Java Fullstack Developtment in Hyderabad in AshokIt institute and i'm good at Core java, SQL, Springboot.
+	My goal is to work as a fullstack developer.  I have gone through the job discription and i believe that this role suits for me 
+	with the skills i have. As your company is the one of the fastest growing company it would great start to my career where i can enhance my skills and 
+	contribute my best to company. My hobbies are watching movies,anime and spending time with family. 
+	That's all about myself 
+	Thank you.
+	
+	
+	someone you lovd,sweater weather

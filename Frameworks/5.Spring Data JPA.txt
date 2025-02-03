@@ -99,6 +99,29 @@ Developing First Data JPA Application
 
 ## Step-5 :: Get repository obj using IOC and call repository methods for testing usin start class.
 
+differnce between JDBC and DATA JPA
+----------------------------------------------
+->in jdbc we need to write common logics
+->jdbc will not support for object data , jdbc will support for text data
+-> we need to write the queries in jdbc
+==> but java representing data in the form of objects. to map object with table and table with object  we use ORM.
+
+=> Repository is a interface in Data jpa which is used to perform DB operations.
+
+=> Spring Data JPA provided Repository interfaces to simplify CURD operations in the application.
+
+=> In Spring Data JPA we have below 2 repositories
+
+		1) CrudRepository
+		
+		2) JpaRepository
+		
+Note: The above 2 repositories provided some predefined methods to perform CRUD operations.
+
+Ex : save(), saveAll(), findById(), findAll(, count(, existsById()....		
+		
+Note: If we use above repositories then we can perform DB operations without writing queries also..		
+
 ------------------------------------------------------------
 
 spring.datasource.url=jdbc:mysql://localhost:3306/sbms52
@@ -267,9 +290,12 @@ Working with Custom Queries in data jpa
 => HQL queris are database independent.
 
 => When we change application from one db to another db then we should change SQL queries also and we need to re-test entire application. This takes lot of time. Maintenence is difficult.
-
 => If we write HQL queries then those HQL queries will be converted into SQL queries based on Database configured in the application using Dialect classes.
 
+what is Dialect class
+------------------------
+=> If we write HQL queries then those HQL queries will be converted into SQL queries based on Database configured in the application using Dialect classes.
+------------------------
 Note : Dialect classes are used to convert HQL to SQL.
 
 => For every database we have dedicated Dialect class.
@@ -336,10 +362,44 @@ What is JpaRepository ?
 
 => JpaRepository supports below 3 extra features
 
-		1) Sorting
-		2) Pagination
-		3) Query By Example (QBE)
+1.sorting
+2.pagination
+3.Query by example
+
+ Sorting
+--------------		
+	public void personSort() {
+
+		Sort sort = Sort.by("country").descending();
+		List<Person> all = personRepo.findAll(sort);
+		all.forEach(System.out::println);
+	}
+ Pagination
+ --------------
 		
+		public void getPersonsPagination() {
+		int pageSize = 3;
+		int pageNo = 1;
+		 PageRequest of = PageRequest.of(pageNo - 1, pageSize);
+		 Page<Person> all = personRepo.findAll(of);
+		 List<Person> content = all.getContent();
+		 content.forEach(System.out::println);
+	}
+
+Query By Example (QBE)
+------------------------
+		public void getPersonQBE(String gender, String name) {
+		Person p = new Person();
+		if(gender!=null) {
+			p.setGender(gender);
+		}
+		if (name!=null) {
+			p.setName(name);
+		}
+		Example<Person> of = Example.of(p);
+		List<Person> all = personRepo.findAll(of);
+		all.forEach(System.out::println);
+	}
 
 ###	JpaRepo = CrudRepo + sorting + pagination  + QBE ###	
 	
@@ -488,6 +548,7 @@ SpringBoot Profiles
 => DEV env used by developers for code integration testing.
 
 => SIT env used by testing team for system integration testing.
+    ->to test all the functionalities are working as expected are not
 
 => UAT env used by client for user acceptance testing.
 
@@ -517,6 +578,18 @@ application-prod.properties
 => At the time of application deployment we can activate particular profile using base properties file then boot will load the specific proile properties file.
 
 		spring.profiles.active=prod
+		
+Q)What is profiles in springboot?
+----------------------------------------
+-> Profiles are used to maintain  the environment specific configurations properties in the application
+		like ;application.properties (base file)
+				application-dev.properties
+				application-sit.properties
+				application-uat.properties
+				application-pilot.properties
+				application-prod.properties
+->when we are deploying the application to the particular environment we will activate the profile to load the cofiguration spefics to that environment.
+->by using this profiles we can easily deploy the application into  multiple environments without spending much time,by activating the profile
 		
 ========================
 Transaction Management	

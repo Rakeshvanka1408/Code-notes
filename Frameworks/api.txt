@@ -1,0 +1,36 @@
+Http Session 
+---------------
+=> Session is used to store user data in the application. 
+=> When user logged in then session obj will be created with user data in the session. 
+=> For every user one session object will be created. 
+Note: Session is specific to browser. 
+=> When user logout from the application then we will remove session object from the 
+application. 
+ 
+Usecase : Session is used in the applications to display data based on logged in user. 
+Ex : user dashboard, user-personal-details, user-education-details, user-enrolled-courses etc.
+Note-1 : If we develop monolithic based applications then we will create session object in java program.
+Note-2: If we develop microservices based applications then we will create session object in ui application.
+Q) Why shouldn't we write sessions in java?
+=> If we write Httpsessions in java program then the session object will be created on server. if 1lakh users loggedin 1lakh session objects will be created incresing burden on the server and memory wastage.
+	So, Session objects always will be created on ui with angular.
+Exception Handling
+===============
+
+=> we can handle the REST API exceptions in 2ways
+	1) Class based Exception Handling
+	2)Global Exception Handling
+
+=> Class based exceptions handling : Handle exceptions occured in particular class only
+=> Global Exceptions Exception handling : 
+
+=> to handle exceptions we will use below 2 annotations.
+	1)@RestControllerAdvice
+	2)@ExceptionHandler
+
+
+
+
+
+
+

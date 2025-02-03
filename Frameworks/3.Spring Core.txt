@@ -433,7 +433,7 @@ constructor
 
 => It is used to enable constructor injection using autowiring.
 
-=> constructor mode internally uses byType to identify dependenty object.
+=> constructor mode internally uses byType to identify dependency object.
 
 
 public class BookDao {
@@ -636,7 +636,7 @@ Lombok Annotations
 Spring Annotations
 ===================
 
-=> Annotations are used to provide metadata to the container.
+=> Annotations are used to provide metadata to the IOC container.
 
 		Ex: @Override, @WebServlet
 

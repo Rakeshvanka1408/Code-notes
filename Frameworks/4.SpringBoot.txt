@@ -1,4 +1,7 @@
-
+What is loosely coupling?
+==================
+=>interfaces are used to make our classes loosely coupled, one class should not communicate with other class directly so that we are
+	using interfaces as mediator between classes
 =======================
 What is SpringBoot ?
 =======================
@@ -97,15 +100,47 @@ Embedded Servers
 ============	
 Actuators	
 ============
+=> Actuators is one of the feature available in SpringBoot
+=> Actuators are used for providing Production Ready Features for the application
+=> By using Actuators we can monitor and manage our application
+			->What is health of our application?
+			-> How many beans loaded by our application?
+			->What config props loaded by our application?
+			->What is Heap info of our application?
+			->How many threads running in our application?
+			=>Actuators will provide all the above information related to our application.
 
-=> Used to monitor and manage springboot application	
+=>To configure actuators in our application spring boot provided below starter(we have to add that in pom.xml file)
+				***  	Springboot-starter-actuator    ***
 
-Ex : 
+=>Once our application started we can use below URL  to see actuator endpoints which are exposed
+			
+			URL:http://localhost:9090/actuator
+			
+note:By default /health endpoint exposed in actuator
+=>If we want to expose all actuator endpoints then we will write below property in application.properties file
+		***   management.endpoints.web.exposure.include=*  (total 13 endpoints it will expose)   ***
+		
+/beans: It will give all the beans which are loaded by our application
+/mappings: It will give all the url_mappings available in our application
+/health: It will give health status of our application
+/configProps: It will give  config properties loaded by our application
+/metrics: It will give metrics of our application
+/loggers: It will give loggers of our application
+/ threadump: It will give all the threads info in our application
+/heapdump: It will download heap information in one file.
+Note: All these actuator endpoints are pre-defined and they are  binded to http get request
 
-1) appliction health checks
-2) classes loaded by application
-3) heap details
-4) Threads details
+=>Access endpoint : http://localhost:9090/actuator/{endpoint-name}
+=>We can execute actuator endpoints using below configurations in application.property
+=>management.endpoints.web.exposure.include=*
+=>management.endpoints.web.exposure.exclude=beans,mappings
+
+=>In actuator we have a special endpoint called /shutdown
+=> This /shutdown endpoint is binded to http post request
+=> Using this endpoint we can stop our application
+=> we have to enable and expose /shutdown endpoint inconfiguration
+		manage.endpoint.shutdown.enabled=true
 
 ====================
 Rapid Development	
@@ -113,7 +148,7 @@ Rapid Development
 
 => Springboot supports rapid application development (quickly we can develop and run applications)
 
-=> We can build applications that we can just run immediatley.
+=> We can build applications that we can just run immediatley. 
 
 => We can build production grade applications using springboot.
 

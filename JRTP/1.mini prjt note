@@ -1,0 +1,23 @@
+BeanUtils.copyProperties(source,target);
+it is used to copy the data from dto obj to entity and entity obj to dto obj;
+														REST API
+											================
+upstream api and downStream api
+--------------------------------------------
+=>The API which is communicating with another API  is called as downStream API.
+=>The third party API is called upStream API.
+
+Q) what is produces  in rest api?
+-------------------------------------
+=> It is  used to specify in which format provider sending response to consumers.
+
+Q)What is Accept header?
+--------------------------------
+=> It is used to specify in which format consumer expecting response from provider.
+
+ex: Accept = application/json
+
+Q) what is content-type header?
+====================
+ => It is used to specify in which format consumer sending request payload data to provider.
+ Ex: Content-type = application/json

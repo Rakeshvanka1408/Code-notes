@@ -1,0 +1,93 @@
+File Links:
+===========
+<a> tag
+<a href = "file-location"> Link Text </a>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> File Links </title>
+    </head>
+    <body>
+        <h1> Welcome To My Website </h1>
+        <a href = "G:\UI_4pm\Day_18\Navigation Bar.txt" target="_blank" name = "myFile"> Get The File </a>
+    </body>
+</html>
+
+============================================
+Bookmarks:
+==========
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bookmarks in HTML </title>
+    </head>
+    <body>
+        <p><a href = "#ch-10"> Chapter-10 </a></p>
+        <h1 id = "ch-1"> Chapter-1 </h1>
+        <p> The content of Chapter-1 </p>
+        <h1> Chapter-2 </h1>
+        <p> The content of Chapter-2 </p>
+        <h1> Chapter-3 </h1>
+        <p> The content of Chapter-3 </p>
+        <h1> Chapter-4 </h1>
+        <p> The content of Chapter-4 </p>
+        <p> <a href = "#ch-13"> Chapter-13 </a></p>
+        <h1 id = "ch-5"> Chapter-5 </h1>
+        <p> The content of Chapter-5 </p>
+        <h1> Chapter-6 </h1>
+        <p> The content of Chapter-6 </p>
+        <h1> Chapter-7 </h1>
+        <p> The content of Chapter-7 </p>
+        <h1> Chapter-8 </h1>
+        <p> The content of Chapter-8 </p>
+        <h1> Chapter-9 </h1>
+        <p> The content of Chapter-9 </p>
+        <p><a href = "#ch-1"> Chapter-01 </a></p>
+        <h1 id = "ch-10"> Chapter-10 </h1>
+        <p> The content of Chapter-10 </p>
+        <h1> Chapter-11 </h1>
+        <p> The content of Chapter-11 </p>
+        <h1> Chapter-12 </h1>
+        <p> The content of Chapter-12 </p>
+        <h1 id = "ch-13"> Chapter-13 </h1>
+        <p> The content of Chapter-13 </p>
+        <p> <a href = "#ch-5"> Chapter-05 </a></p>
+    </body>
+</html>
+
+============================================
+
+<iframe>
+========
+==> used to open an website in another website.
+Syntax:
+	<iframe src = "address" width height>
+
+Attribute:
+==========
+frameborder = "0" ==> to off the border for iframes.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> IFrames in HTML </title>
+    </head>
+    <body>
+        <h1> Welcome to Ashok IT </h1>
+        <iframe src="https://ashokitech.com/trainer/class-notes?batchCode=05-Web%20Development-4PM-26-Aug-24-FR" width="400px" height="400px" frameborder = "0"></iframe>
+        <iframe src = "https://us06web.zoom.us/postattendee?mn=atcchhXo5knEZCHXeX07h8M5NhB5oUtiVtxg.ndfKV7aOGu50ascP" width = "400px" height="400px" frameborder = "0"></iframe>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

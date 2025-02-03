@@ -244,7 +244,7 @@ Java Frameworks
 
 => We have several frameworks in java community
 
-      1) JSF -----------> outdated
+      1) JSP -----------> outdated
       2) Hibernate -----> data jpa
       3) Struts -------> out dated
       4) Spring ---> SpringBoot ----> trending
@@ -259,7 +259,7 @@ Note: The above frameworks developed by using JSE and JEE.
 
 
 => Struts framework developed by Apache
-=> Struus is used to develop only web layer
+=> Struts is used to develop only web layer
 
 => Spring is called as application development framework
 => Using spring we can develop entire application.

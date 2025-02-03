@@ -1,3 +1,58 @@
+Course Content
+--------------------------
+What is a web application
+Multi Page Web application
+single Page web Application 
+Angular Introduction
+Angular JS vs Angular Framework
+Angular Framework Version History
+Adavantages of Angular
+Angular Architecture
+part 2
+-------
+TypeScript Introduction
+Advantages of TypeScript
+Java Script vs TypeScript
+Environment Setup to work TypeScript
+Variables 
+DataTypes
+OOPs
+class
+Object
+Constructor
+Inheritances
+Enumerations
+Modules
+Examples Using TypeScript
+
+part 3
+-------
+Revise Angular Introduction
+Revise Angular Architecture
+Environment Setup (NPM ,Angular CLI ,VS Code IDE)
+First Application Creation Using Angular
+Understanding Angular Application Folder structures
+Live Server to run Angular apps
+Components in Angular
+Modules 
+Data Bindings
+Login app  Using Angular
+Directives
+Pipes
+Form Based Applications Using Angular
+			-Template driven forms
+			-Reactive forms
+Form validations 
+Routings
+part 4
+--------
+Http Client 
+2 or 3 Rest APIS  using spring Boot
+Consuming Backend Rest Apis using Angular
+Interview Questions
+
+
+
 Angular Introduction
 ------------------------
 ->Angular is a client side frameword
@@ -32,3 +87,139 @@ Angular Architecture
 4.Templates
 5.Directives
 6.Pipes
+
+Angular -11
+--------------------
+-> Angular is a client side framework
+-> Angular is used to create web applications
+-> Angular is mainly used to develop single page application
+	ex; gmail, angular.io
+-> Angular frmework is free and open source
+-> Angular framework developed by Google
+-> There are 2 flavours of Angular
+			1.Angular JS (Angular 1.x)
+			2.Angular (Angular 2+ versions)
+-> Angular js is developed using java script 
+-> Angular framework is developed by using TypeScript
+note: Angular framework is completely re-written by google  in Angular 2.0 version
+-> Angular is not extension for Angular js (angular is completely different from angular js)
+
+
+Angular Architecture
+---------------------------
+1.Components
+		-Component is a typescript class  which acts as Request Handler
+2.Meta Data
+		-Meta Data describes  Component and Template mapping
+3.Service
+		-Service is a TypeScript class which is used to write business logics
+4.Data Bindings
+		-Data  Bindings are used for transferrng the data from component to template and from template to component.
+5.Template
+		-Template is a HTML file which contains presentation logic
+6.Directives
+		-Directives are used for DOM	 Manipulation
+7.Pipes
+		-Pipes are use to transforming the data from one format to another format.
+
+
+TypeScript:
+-----------------
+-> TypeScript is a programming language which is developed by using Java Script .
+
+-> TypeScript is superset of java script which adds data types + classes + Interfaces etc..
+
+-> typescript can be used for both client side and server side programming
+
+-> TypeScript develped  by Microsoft company in 2012.
+
+Features of TypeScript
+---------------------------
+->TypeScript is general purpose programming language 
+ 
+-> TypeScript buit on top of java script
+
+->TypeScript supports all features of java script and it is providing some addiitional features
+
+note: Java Script can be executed in browser directley where as Browser can't execute Typescript Directly
+
+->TypeScript files should be converted into java script
+
+-> The process of convertion TypeScript file into javascritp is called as "Transpilation".
+				files.ts ---------> tsc----------> file.js----------->browser---------->output
+
+->typescript provided compiler (tsc) it is used to perform "Transpilation".
+->Supports for OOps also.
+				
+TypeScript versions:
+------------------------
+TypeScript o.8  : 2012 (initial version)
+............
+TypeScript 5.x : 2024
+
+Static Typing & Dynamic Typing
+--------------------------------------
+-> Whenever we can fix a data  type for the variable while declaration of the variable and we can't change its datatype througout the program then it is called as "Static Typing"
+
+						int age = 20;//valid
+						age = "20 years" ;//in-valid
+			ex: c,c++,java,c#, .Net are examples for static typing language
+		
+-> If we can't fix data type for the variable while declaration and the data type will be automatically taken by the runtime engine at the time of program execution then it is called as "Dynamic Typing"
+
+							var age;
+							age = 20;//valid
+							age = "20 years" ;//valid
+		ex: JavaScript and python  are examples for Dynamic Typing Language
+	
+->TypeScript supports "optional Static typing". It supports both Static Typing and Dynamic Typing
+
+->TypeScript maintains Type Safety . If we specify data type while declaring the variable and if we 
+	assign wrong type of value into variable then compiler shows error.
+	
+TypeScript Installation
+-----------------------------
+->Install node JS (nodejs.org)
+->in cmd promp -> npm install -g typescript
+->tsc -v ; to find typescript version installed 
+
+TypeScript First Example
+-----------------------------
+->Create TypeScript file with .ts exxtension and add below code 
+										
+										var s:string ="Hello World";//in java: String s  ="Hello World";
+										console.log(s);// in java :System.out.println(s);
+->Open cmd and compile typescript file
+		
+										tsc<filename>.ts
+		note: tsc compiler will convert ts file into js file (Transpilation)
+->Run js file using node with below command
+					node <filename>.js
+
+
+variables in TypeScript
+----------------------------
+-> Variables are used to store the value
+->variable is a named memory (every variable will have name and will occupy some memory)
+
+										Syntax: var variableName: dataType = value;
+										
+										ex:     var age: int = 20;// variable in typescript
+										           int age = 20; // in java
+												  
+DataTypes
+--------------
+->DataTypes specifies what type of value that can be stored into variable.
+
+Typescript datatypes
+------------------------
+->number
+->string
+->boolean
+->any: Any type of value we can store
+
+		var pname :string = "rakesh";//valid
+		var age: number = 24;
+		var gender : string = 'male';//valid
+
+

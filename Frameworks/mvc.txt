@@ -1,0 +1,82 @@
+Controller
+------------
+=>It is responsible to handle the request . 
+=> We wil use @Controller annotation to represent java class as controller class.
+=> Inside controller we can write multiplw methods to handle the requests.
+=> Controller method will return ModelAndView object.
+
+Model: It is used to send data from controller to UI in key-value format.
+		 model.addAttribute(key,value
+=>We can send data from controller to UI in 3 ways
+		1)ModelAndView
+		2)Model
+		3)@ResponseBody
+		 
+==========================
+What is @ResponseBody annotation?
+---------------------------------------------
+=> It is used to represent that our controller method is  returning direct response to client without any view pages .
+
+@GetMapping("/demo")
+@ResponseBody
+public String demoMsg(){
+return "This is deomo msg";
+}
+=>We can  write this @ResponseBody at method level and at class level also.
+=> if we write the @ResponseBody at class level it is applicable for all methods belongs to that class.
+note: @Controller + @ResponseBody = @RestController
+
+=======================
+How to send data from UI to Controller
+========================
+=>In 3ways we can send data from UI to Controller
+		1)Request Parameter
+		2)Path Variable
+		3)Request Body
+what is Request Parameter?
+-----------------------------
+=>Request Parameter also called as Query Parameters.
+=>These are used to send data from client to server in URL 
+=> Request {arameter will represent data in key-value format. 
+ex: www.ashokit.in/courses?name=sbms&trainer=ashok
+=>Request Parameter will start with ? and will seperate by &.
+=> To read Request Parameter from the URL will use @RequestParam.
+@GetMapping("/demo")
+@ResponseBody
+public String demoMsg(@RequestParam("name"),String name){
+return name+",This is deomo msg";
+}
+What is path variable?
+-----------------------------
+=>Path Variables also called as URL variables and Path parameters.
+=>These are used to send data from client to server in URL .
+Ex: www.ashokit.in/course/sbms
+Note:Path Variables will represent data directly without any key.
+Note: Path Variables position we need to represent in URL template.
+
+			Ex: @GetMapping("/greet/{name}")
+=>To read path variables from URL we will use @PathVariable annotation.
+
+	@GetMapping("/greet/{name}")
+	@ResponseBody
+	public String demoMsg(@PathVariable("name"),String name){
+	return name+",This is deomo msg";
+	}
+	
+1)What is Spring Web MVC
+2) What is Web Application?
+3)What is Distributed Application?
+4)Advantages with Spring Web MVC?
+5)Spring web mvc Architecture
+6)What is Dispatcher Servlet
+7)what is Handler Mapper
+8)What is Controller?
+9)ModelAndView
+10)View Resolver
+11)What is View?
+12)What is form Binding
+13)What is @ResponseBody 
+14)Form Submission with RequestBody
+15)What is Path Variable
+16)What is RequestParam
+17)Web App with CRUD operations
