@@ -20,7 +20,6 @@ What is Cache
 
 
 => It is not recommended to read static data from DB table everytime. Because DB call is costly operation which will reduce performance of the application. 
-
     (driver loading + connection + query execution + data process + conn close)
 
 Usecase : Read countries from db table and display in application registration page as drop down options.
@@ -96,10 +95,10 @@ Spring Boot with Redis Integration
 ## Step-1 : Create springboot app with below dependencies
 
         a) web-starter
-        b) starter-data-redis
+        b) starter-data-redis(Access+Driver)
         c) jedis
         d) devtools
-
+>> jedis dependency should be added manually
 <dependency>
     <groupId>redis.clients</groupId>
     <artifactId>jedis</artifactId>
@@ -115,10 +114,108 @@ spring.data.redis.password=Q4v9GqpC54RBMZIRMmRBM4DQI57GcL8Y
 
 ## Step-3 :: Create RedisConfig class to establish connect with Redis Server
 
+	package in.ashokit.config;
+
+	import org.springframework.beans.factory.annotation.Value;
+	import org.springframework.context.annotation.Bean;
+	import org.springframework.context.annotation.Configuration;
+	import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
+	import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
+	import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+
+@Configuration
+public class RedisConfig {
+
+	@Value("${spring.data.redis.url}")
+	private String url;
+
+	@Value("${spring.data.redis.port}")
+	private Integer port;
+
+	@Value("${spring.data.redis.username}")
+	private String uname;
+
+	@Value("${spring.data.redis.password}")
+	private String pwd;
+
+	@Bean
+	public JedisConnectionFactory jedisConnectionFactory() {
+		RedisStandaloneConfiguration serverConfig = new RedisStandaloneConfiguration(url, port);
+
+		serverConfig.setUsername(uname);
+		serverConfig.setPassword(pwd);
+
+		JedisClientConfiguration clientConfig = JedisClientConfiguration.builder().build();
+		return new JedisConnectionFactory(serverConfig, clientConfig);
+
+	}
+}
+
+
 ## Step-4 :: Create Entity to represent data (@RedisHash)
 
+	package in.ashokit.entity;
+
+	import org.springframework.data.redis.core.RedisHash;
+
+
+	@RedisHash("studentHash")
+	public class Student {
+
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
+		public String name;
+		public Integer id;
+	}
+
 ## Step-5 :: Create Repository to perform CRUD operations
+		package in.ashokit.repo;
+
+	import org.springframework.data.repository.CrudRepository;
+
+	import in.ashokit.entity.Student;
+
+	public interface StudentRepository extends CrudRepository<Student,Integer> {
+
+	}
 
 ## Step-6 :: Create REST Controller with HTTP methods
+		package in.ashokit.controller;
+
+		import org.springframework.beans.factory.annotation.Autowired;
+		import org.springframework.web.bind.annotation.GetMapping;
+		import org.springframework.web.bind.annotation.PostMapping;
+		import org.springframework.web.bind.annotation.RequestBody;
+		import org.springframework.web.bind.annotation.RestController;
+
+		import in.ashokit.entity.Student;
+		import in.ashokit.repo.StudentRepository;
+
+		@RestController
+		public class StudentRestController {
+
+			@Autowired
+			private StudentRepository srepo;
+			@PostMapping("/student")
+			public String addStudent(@RequestBody Student student) {
+				srepo.save(student);
+				return "Student saved";
+			}
+			
+			@GetMapping("/student")
+			public Iterable<Student> getAllStudent(){
+				return srepo.findAll();
+			}
+		}
 
 ## Step-7 :: Test the application from postman. 
