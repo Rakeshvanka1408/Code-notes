@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "85b0486c-1a06-41aa-a90f-30ea8739dc2c",
+		"name": "JRTP28-EComm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33481337"
+	},
+	"item": [
+		{
+			"name": "Product-API",
+			"item": [
+				{
+					"name": "GET Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-ip}}:{{port-number}}/categories",
+							"host": [
+								"{{server-ip}}"
+							],
+							"port": "{{port-number}}",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Products with Category ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-ip}}:{{port-number}}/products/1",
+							"host": [
+								"{{server-ip}}"
+							],
+							"port": "{{port-number}}",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Products With Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-ip}}:{{port-number}}/productsByName/Laptop",
+							"host": [
+								"{{server-ip}}"
+							],
+							"port": "{{port-number}}",
+							"path": [
+								"productsByName",
+								"Laptop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-ip}}:{{port-number}}/product/21",
+							"host": [
+								"{{server-ip}}"
+							],
+							"port": "{{port-number}}",
+							"path": [
+								"product",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

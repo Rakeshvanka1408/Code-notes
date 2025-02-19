@@ -18,6 +18,7 @@ Spring Security
 		2) Authorization
 
 -> Authentication means verifying who can access our application.
+->
 
 -> Authorization means verifying which user can access which functionality.		
 
@@ -56,8 +57,8 @@ How to override Spring Security Default Credentials
 
 -> To override Default credentials we can configre security credentials in "application.properties" file or "application.yml" file like below
 
-spring.security.user.name=ashokit
-spring.security.user.password=ashokit@123
+spring.security.user.name=rakesh
+spring.security.user.password=rakesh@123
 
 =====================================
 How to secure specific URL Patterns
@@ -354,6 +355,9 @@ Note: In API-Gateway we have added routings for our microservices along with Fil
 
 
 
+Q) How to send authentication details in request header using RestTemplate?
+
+Q)How to send authentication details in request header WebClient?
 
 
 ========
