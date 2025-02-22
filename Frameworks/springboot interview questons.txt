@@ -1,0 +1,146 @@
+=============================
+Spring Boot interview questions
+==============================
+1) What is Spring?
+>>It is Framework which is used to make light-weight, loosly coupled enterprises application in java.
+>>It provides pre-defined API for database Operations, Restful web services, micro services and Security.
+>>We can develop distributed application very faster. It is mainly for backend application development using java.
+
+2)What are the features fo Spring Framework?
+----------------------------------------
+=>Spring provides
+	1.Predifined template
+	2.Loose coupling
+	3.Light weight(occupies very less memory)
+	4.Easy to test
+	5.Powerful Abstraction
+	6.Fast Development(RAD)
+
+3)What is Dependency Injection(DI)?
+-------------------------------------
+>>Dependency Injection is a mechnaism which is used to inject the dependency class into dependent class.
+>>Basically when we write any program sometime it's needed to create the object of some class, So dependency injection helped us to create object creation process, It will do that work automatically by own. 
+>>For achieving this functionality we have only configure that particular dependency class to dependent class in XML file or we can use Annotation also.
+
+4)what are the types of DI?
+----------------------------
+=>Mainly there are 5 types of Dependency Injections
+	1.constructor injection 
+	2.Setter Injection
+	3.Field Injection (@Autowired)
+	4.Circular injection
+	5.Lookup method injection 
+	(but mostly we used first two types inour day by day life.)
+	
+5)What is IOC in Spring?
+-------------------------
+>The full form of IOC is Inversion of Control.
+>>Basically the spring container uses Dependency injection for managing the application components by creating objects wiring 
+	them together along with configuring and managing their overall life cycles.
+>>The instructions for the spring container to do the tasks will provided either by XML confiruration, Annotation of java code,
+	This whole process called as Inversion of control.
+	
+6)What is spring cinfiguration file>
+-------------------------------------
+>> It is XML file which is contains the information of classes and describes how those classes configured and linked with each other. 
+>> It is called as XML configuration file.
+>> Sample code looks like: 
+	<bean id ="ob1" class ="com.app.EmployeeService">
+		<propertiy name="empType">
+			<value>export</value>
+		</property>
+	</bean>
+
+7)what is spring Bean?
+-----------------------
+>> It is objects forming the Backbones of the Users Application and it instatntiated, configured, wired, Managed by Spring IOC Container.
+>> Basically it will created by the help of Configuration code which is supply by user to IOC Container.
+
+8)Difference between Constructor and Setter Injection?
+-------------------------------------------------------
+>>By the construction injection Partial injection is not possible but we can achieve Partial injection by Setter injection.
+>>In the construction injection new instance will created if any modification but it is not possible in the setter injection we can't achieve any new instances.
+>>If the bean have many properties then we prefer constructor injection and if bean have some few properties than we preferred for setter injection.
+>>Constructor injection dosen't override the setter properties but setter injection overrride the construction properties.
+
+9)what are the Bean Scope Spring provided?
+-------------------------------------------
+.Spring provided five types of scopes these are
+	1.Singleton
+	2.Prototype
+	3.Request
+	4.Session
+	5.Global-session (not exist in new versions of Spring)
+	
+10)What is Bean Wiring?
+----------------------
+>>When the beans are combined together inside the spring container, that is called wired or bean wiring.
+>>The Spring container should know what beans are needed and how the beans are dependent each other while wiring Beans.
+>>Ex; combine EmployeeService object with EmployeeRepository object
+
+11)What is Autowiring in Spring & what are the different modes it have?
+------------------------------------------------------------------------
+>>The Spring framework can inject dependency Automatically. 
+>> The IOC container will first detect thaose dependencies Sprecified in the configuration file and the relationship between the beans and then it will inject Automatically this process is called Autowiring.
+>>It have five modes these are
+	1.No
+	2.byName
+	3.byType
+	4.constructor
+	5.autodetect
+	
+12)What is the difference between @Autowired and @Inject?
+-----------------------------------------------------------
+>>Both annotation are used for same purpose means @Autowired annotation is used for Autowiring in Spring Framework.
+>>@Inject also used for same purpose but difference is @Inject is a standard Annotation for Dependency injection and the @Autowired is Specified annotation is Spring for dependency injection.
+>>@Inject is part of the Java CDI (contexts and Dependency injection) standard introduced in Java EE 6 (JSR-299)
+
+13)What is the difference between @Component and @Bean
+------------------------------------------------------
+>>@Component creates object inside spring container.It can be used only if we have source code of class[programmer-defined class]
+>>If a class is pre defined and wants to creates object inside container then we need to use @Bean (Java based configuration)along with @Configuration[Java based configuration]
+
+14)How many types of IOC Containers are there in spring?
+--------------------------------------------------------
+=> There are two types of Containers these are-
+	1.BeanFactory: BeanFactory is like a factory class that contains a collection of beans. It instantiate the bean whenever asked for by clients.
+	2.ApplicationContext: The ApplicationContext interface is build on  top of the BeanFactory interface. It provides some extra functionality on top BeanFactory. like: Annotations support, Multi-container system, Reactive Programming...etc
+	
+15)What is the use of @Required Annotaion in Spring framework?
+---------------------------------------------------------------
+>>@Required is applied to bean property setter methods.
+>>This is indicates that the affected bean property must be populated at the configuration time with the help of an explicit property value in a bean 
+	 definition or with Autowiring.
+	 
+16)What is the use of @Autowired Annotation in Spring ?
+-----------------------------------------------------------
+>> It is used to link (Inject )two beans inside Spring container.
+>>Mostly recommended useing Field Injection.
+>>Ex: Class EmployeeService{
+			@Autowired
+			EmployeeRepository repo;
+		}
+
+17)What is the use of @Qualifier Annotation in Spring framework?
+-----------------------------------------------------------------
+>> When we create more than one bean of the same type and want to wire onlyone of them with property we can use the @Qualifier annotaion along with @Autowired to remove the ambuguity by specifying which exact bean should be wired.
+
+18)What is @Primary Annotation in Spring?
+-------------------------------------------
+>>Indicates that a bean should be given preference when multiple candidates are qualified to Autowired a single-valued dependency. 
+>>In case of Autowiring process, if no qualifier is used, @Primary is given highest prioriry.
+
+19)What are lifecycle methods in Spring?
+----------------------------------------
+>>init and destroy methods are called as Life Cycle methods in Spring.
+>>They are Executed by default by Spring Container while ceating object.
+
+20)what are different ways of writing Lifecycle methods in spring?
+-------------------------------------------------------------------
+>>Using XML (also called Declarative Approach)
+	<bean...init-method="" destroy-method=""></bean>
+>>Using Spring Interfaces (also called Programmatic Approach)
+	Implement interfaces: InititalizingBean, DisposableBean
+>>Using Annotations	
+	@PostContruct and @PreDestroy
+	
